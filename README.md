@@ -10,3 +10,5 @@ The URL of the index file is accessed by clients, which then request the indexed
 
 格式說明可參考 [Example Playlist Files for use with HTTP Live Streaming
 ](https://developer.apple.com/library/content/technotes/tn2288/_index.html)
+
+此程式碼所參考的原始碼為 [Brainiarc7/Download and merge HTTP Live Streaming .ts files](https://gist.github.com/Brainiarc7/e7b6cd96e7bbee0a3cc8167fb2003373)
