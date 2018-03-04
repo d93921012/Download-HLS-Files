@@ -167,6 +167,9 @@ function getPlaylist($plstr) {
 // 已修改為加上 4 個 0
 function downloadSegmentFiles($list)
 {
+    // 一邊下載，同時組合，可以一邊看
+    file_put_contents('movie_tmp.ts', '');
+    
     $n = 1;
     foreach ($list as $key) {
         $number = str_pad($n, 4, "0", STR_PAD_LEFT);
@@ -198,6 +201,9 @@ function downloadSegmentFiles($list)
             rename('tmp.ts', $fn);
             echo "download ok!\n";
         }
+        
+        $shellScript = "cat ".$fn." >> movie_tmp.ts";
+        shell_exec($shellScript);
         $n++;
     }
 
